@@ -1,0 +1,454 @@
+[
+  {
+    "name": "Candy",
+    "brand": "Kymco",
+    "engine": "50cc",
+    "type": "Automatic",
+    "slug": "kymco-candy",
+    "docs": [
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/kymco-candy-1.webp",
+      "img/fleet/kymco-candy-2.webp",
+      "img/fleet/kymco-candy-3.webp",
+      "img/fleet/kymco-candy-4.webp"
+    ],
+    "thumb": "img/fleet/kymco-candy-preview.webp"
+  },
+  {
+    "name": "Like",
+    "brand": "Kymco",
+    "engine": "50cc",
+    "type": "Automatic",
+    "slug": "kymco-like",
+    "docs": [
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/kymco-like-1.webp",
+      "img/fleet/kymco-like-2.webp",
+      "img/fleet/kymco-like-3.webp",
+      "img/fleet/kymco-like-4.webp"
+    ],
+    "thumb": "img/fleet/kymco-like-preview.webp"
+  },
+  {
+    "name": "Elite",
+    "brand": "SYM",
+    "engine": "50cc",
+    "type": "Automatic",
+    "slug": "sym-elite",
+    "docs": [
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/sym-elite-1.webp"
+    ],
+    "thumb": "img/fleet/sym-elite-preview.webp"
+  },
+  {
+    "name": "Angela",
+    "brand": "SYM",
+    "engine": "50cc",
+    "type": "Semi-Automatic",
+    "slug": "sym-angela",
+    "docs": [
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/sym-angela-1.webp",
+      "img/fleet/sym-angela-2.webp"
+    ],
+    "thumb": "img/fleet/sym-angela-preview.webp"
+  },
+  {
+    "name": "VoltGuard",
+    "brand": "YADEA",
+    "engine": "Electric",
+    "type": "Automatic",
+    "slug": "yadea-voltguard",
+    "docs": [
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/yadea-voltguard-1.webp"
+    ],
+    "thumb": "img/fleet/yadea-voltguard-preview.webp"
+  },
+  {
+    "name": "Air Blade",
+    "brand": "Honda",
+    "engine": "110cc & 125cc",
+    "type": "Automatic",
+    "slug": "honda-air-blade",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance",
+      "Straps for Backpacks",
+      "Givi 40L Top Box available on some bikes (additional fee)"
+    ],
+    "images": [
+      "img/fleet/honda-air-blade-1.webp",
+      "img/fleet/honda-air-blade-2.webp",
+      "img/fleet/honda-air-blade-3.webp",
+      "img/fleet/honda-air-blade-4.webp"
+    ],
+    "thumb": "img/fleet/honda-air-blade-preview.webp"
+  },
+  {
+    "name": "Vision",
+    "brand": "Honda",
+    "engine": "110cc",
+    "type": "Automatic",
+    "slug": "honda-vision",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/honda-vision-1.webp",
+      "img/fleet/honda-vision-2.webp",
+      "img/fleet/honda-vision-3.webp"
+    ],
+    "thumb": "img/fleet/honda-vision-preview.webp"
+  },
+  {
+    "name": "Lead",
+    "brand": "Honda",
+    "engine": "110cc & 125cc",
+    "type": "Automatic",
+    "slug": "honda-lead",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/honda-lead-1.webp",
+      "img/fleet/honda-lead-2.webp"
+    ],
+    "thumb": "img/fleet/honda-lead-preview.webp"
+  },
+  {
+    "name": "SH",
+    "brand": "Honda",
+    "engine": "150cc",
+    "type": "Automatic",
+    "slug": "honda-sh",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance",
+      "Givi 40L Top Box"
+    ],
+    "images": [
+      "img/fleet/honda-sh-1.webp"
+    ],
+    "thumb": "img/fleet/honda-sh-preview.webp"
+  },
+  {
+    "name": "Nouvo 6",
+    "brand": "Yamaha",
+    "engine": "125cc",
+    "type": "Automatic",
+    "slug": "yamaha-nouvo-6",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance",
+      "Straps for Backpacks"
+    ],
+    "images": [
+      "img/fleet/yamaha-nouvo-6-1.webp",
+      "img/fleet/yamaha-nouvo-6-2.webp",
+      "img/fleet/yamaha-nouvo-6-3.webp",
+      "img/fleet/yamaha-nouvo-6-4.webp"
+    ],
+    "thumb": "img/fleet/yamaha-nouvo-6-preview.webp"
+  },
+  {
+    "name": "Nouvo 5",
+    "brand": "Yamaha",
+    "engine": "125cc",
+    "type": "Automatic",
+    "slug": "yamaha-nouvo-5",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/yamaha-nouvo-5-1.webp",
+      "img/fleet/yamaha-nouvo-5-2.webp"
+    ],
+    "thumb": "img/fleet/yamaha-nouvo-5-preview.webp"
+  },
+  {
+    "name": "Freego S",
+    "brand": "Yamaha",
+    "engine": "125cc",
+    "type": "Automatic",
+    "slug": "yamaha-freego-s",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/yamaha-freego-s-1.webp",
+      "img/fleet/yamaha-freego-s-2.webp",
+      "img/fleet/yamaha-freego-s-3.webp",
+      "img/fleet/yamaha-freego-s-4.webp"
+    ],
+    "thumb": "img/fleet/yamaha-freego-s-preview.webp"
+  },
+  {
+    "name": "Janus",
+    "brand": "Yamaha",
+    "engine": "125cc",
+    "type": "Automatic",
+    "slug": "yamaha-janus",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/yamaha-janus-1.webp",
+      "img/fleet/yamaha-janus-2.webp",
+      "img/fleet/yamaha-janus-3.webp"
+    ],
+    "thumb": "img/fleet/yamaha-janus-preview.webp"
+  },
+  {
+    "name": "Grande",
+    "brand": "Yamaha",
+    "engine": "125cc",
+    "type": "Automatic",
+    "slug": "yamaha-grande",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/yamaha-grande-1.webp",
+      "img/fleet/yamaha-grande-2.webp"
+    ],
+    "thumb": "img/fleet/yamaha-grande-preview.webp"
+  },
+  {
+    "name": "Liberty",
+    "brand": "Piaggio",
+    "engine": "125cc",
+    "type": "Automatic",
+    "slug": "piaggio-liberty",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/piaggio-liberty-1.webp"
+    ],
+    "thumb": "img/fleet/piaggio-liberty-preview.webp"
+  },
+  {
+    "name": "Vespa LX125",
+    "brand": "Piaggio",
+    "engine": "125cc",
+    "type": "Automatic",
+    "slug": "piaggio-vespa-lx125",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/piaggio-vespa-lx125-1.webp"
+    ],
+    "thumb": "img/fleet/piaggio-vespa-lx125-preview.webp"
+  },
+  {
+    "name": "Future",
+    "brand": "Honda",
+    "engine": "125cc",
+    "type": "Semi-Automatic",
+    "slug": "honda-future",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/honda-future-1.webp",
+      "img/fleet/honda-future-2.webp",
+      "img/fleet/honda-future-3.webp",
+      "img/fleet/honda-future-4.webp"
+    ],
+    "thumb": "img/fleet/honda-future-preview.webp"
+  },
+  {
+    "name": "Wave Alpha",
+    "brand": "Honda",
+    "engine": "110cc",
+    "type": "Semi-Automatic",
+    "slug": "honda-wave-alpha",
+    "docs": [
+      "Motorcycle Licence",
+      "IDP (International Driving Permit)",
+      "Passport",
+      "Visa or TRC",
+      "Address in Vietnam & Home",
+      "Active Phone Number"
+    ],
+    "included": [
+      "Helmets",
+      "Raincoat",
+      "Basic 3rd party insurance"
+    ],
+    "images": [
+      "img/fleet/honda-wave-alpha-1.webp"
+    ],
+    "thumb": "img/fleet/honda-wave-alpha-preview.webp"
+  }
+]

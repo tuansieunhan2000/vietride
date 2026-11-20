@@ -1,0 +1,12 @@
+{
+  "saigon-and-around": {
+    "title": "Saigon & Around", "category": "City rides", "photo": "saigon-streets.jpg", "alt": "A view of Ho Chi Minh City", "intro": "A city ride is best taken one neighbourhood at a time. Start in An Khanh and use our Saigon tour map to connect your stops.",
+    "sections": {"Plan a city loop": "Open the Saigon map before leaving the shop and choose two or three stops close together. Leave time between them for finding a guarded parking area and exploring on foot.", "Stop for lunch": "Park once and walk to lunch. Try cơm tấm, broken rice with a grilled topping, or a bowl of bò kho, a slow-cooked beef stew. Keep the parking ticket until you collect your bike.", "Before heading back": "Save your return route and the shop address offline. If the weather turns, pause somewhere sheltered and give yourself more time for the return ride."},
+    "maps": ["saigon-tour-map.webp","saigon-tour-stops.webp"], "pdf": "https://drive.google.com/file/d/1TPQWbJpKMFWOx1swpd51vc9W0XHTnDCu/view?usp=sharing", "bike":"honda-vision", "source":"https://vietnam.travel/things-to-do/enjoy-great-outdoors-ho-chi-minh-city/"
+  },
+  "vietnam-road-trips": {
+    "title":"Vietnam Road Trips", "category":"Southern Vietnam", "photo":"mekong-delta.jpg", "alt":"Waterways and greenery in the Mekong Delta", "intro":"Follow the waterways beyond Saigon. Use VietRide’s Vietnam map to sketch a longer journey, with time for small towns and stops on foot.",
+    "sections":{"Pick a destination": "For a Delta trip, look at Mỹ Tho and Bến Tre. Coconut groves, river crossings and market towns give the ride a different pace from the city. Choose an overnight stop before planning the return.", "Plan each leg": "Use the map for orientation, then check the day’s road conditions and motorcycle access with the team. Pick fuel and rest stops in advance, and leave room for rain and ferry waits.", "Pack for the return": "Keep documents and your phone dry. Confirm luggage space and any rack or top box at collection. Save VietRide’s contact details so you can reach the team away from the city."},
+    "maps":["vietnam-road-map.webp"], "pdf":"https://drive.google.com/file/d/1PezxiVbb1M-hgUZnCoRWMVXpIO7v9lzy/view?usp=sharing", "bike":"honda-future", "source":"https://vietnam.travel/things-to-do/4-memorable-days-mekong-delta/"
+  }
+}

@@ -1,0 +1,11 @@
+/* With scripting disabled, expose the same navigation as ordinary links. */
+@media (max-width:1279px), (hover:none) and (pointer:coarse) {
+  .vr-nav { position:relative; top:0; }
+  .vr-nav-inner { flex-wrap:wrap; padding-block:.75rem; }
+  #vr-menu { position:static; flex-flow:row wrap; width:100%; margin-left:0; padding:0; gap:.25rem 1rem; overflow:visible; transform:none; visibility:visible; }
+  #vr-menu a { color:var(--vr-ink); font-size:.94rem; min-height:44px; }
+  .header__container { margin-top:0; }
+  .vr-inside { padding-top:2rem; }
+}
+
+/*# sourceMappingURL=vietride-nojs.css.map */

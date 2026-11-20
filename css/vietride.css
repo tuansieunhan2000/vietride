@@ -1,0 +1,1812 @@
+/* Layout and type follow the two production reference sections in vietride-reference.css. */
+:root {
+  --vr-ink: var(--text-dark);
+  --vr-muted: var(--text-light);
+  --vr-accent: var(--primary-color);
+  --vr-action: #bf211b;
+  --vr-paper: #fff;
+  --vr-wash: #f7f6f3;
+  --vr-border: #dadbd9;
+  --vr-radius: 5px;
+  --vr-photo-radius: 1rem;
+  --vr-font: Mulish, Arial, sans-serif;
+  --vr-reading: 46rem;
+  --vr-gap: 2rem;
+  --vr-section: clamp(3rem, 6vw, 5.5rem);
+  --vr-motion: 160ms ease;
+}
+
+html {
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: var(--vr-font);
+  color: var(--vr-ink);
+  background: white;
+}
+
+.site a:focus-visible, .site summary:focus-visible, .site button:focus-visible {
+  outline: 3px solid #9a251e;
+  outline-offset: 4px;
+}
+
+.header__image img, .service__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.service__list {
+  list-style: none;
+  padding: 0;
+}
+
+.vr-skip {
+  position: fixed;
+  top: -100px;
+  left: 8px;
+  z-index: 2000;
+  padding: 12px;
+  background: white;
+}
+
+.vr-skip:focus {
+  top: 8px;
+}
+
+.vr-wrap {
+  width: min(100%, var(--max-width));
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.vr-nav {
+  position: fixed;
+  z-index: 100;
+  top: var(--vr-admin-offset, var(--wp-admin--admin-bar--height, 0px));
+  inset-inline: 0;
+  background: white;
+  border-bottom: 1px solid var(--vr-border);
+}
+
+.vr-nav-inner, .vr-actions, .vr-filterbar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.vr-nav-inner {
+  min-height: 78px;
+  justify-content: space-between;
+}
+
+.vr-nav img, .vr-footer img {
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+#vr-menu {
+  margin-left: auto;
+  display: flex;
+  gap: clamp(0.8rem, 2vw, 2rem);
+}
+
+#vr-menu a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--vr-ink);
+  font-weight: 600;
+  font-size: 0.94rem;
+}
+
+#vr-toggle, #vr-toggle .ri-close-fill, .vr-nav-shade {
+  display: none;
+}
+
+.vr-btn, .vr-link, .vr-editorial summary, .vr-filters button {
+  min-height: 44px;
+}
+
+a.vr-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--vr-action);
+  color: white;
+  padding: 0.65rem 1.2rem;
+  border-radius: var(--vr-radius);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.vr-btn:hover {
+  background: #9c1f1a;
+  color: white;
+}
+
+.vr-editorial {
+  font-family: var(--vr-font);
+  color: var(--vr-ink);
+  line-height: 1.75;
+}
+
+.vr-editorial h1, .vr-editorial h2 {
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.032em;
+  text-wrap: balance;
+  max-width: 28ch;
+}
+
+.vr-editorial h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3.25rem);
+}
+
+.vr-editorial h2 {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  margin-bottom: 1.25rem;
+}
+
+.vr-editorial h3 {
+  font-size: 1.22rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.vr-editorial p {
+  color: var(--vr-muted);
+}
+
+.vr-editorial a, .vr-footer a {
+  color: var(--vr-action);
+}
+
+.vr-editorial a.vr-btn {
+  color: white;
+}
+
+.vr-kicker, .vr-meta {
+  margin-bottom: 0.5rem;
+  font-size: 0.91rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.vr-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 3px;
+  background: var(--vr-accent);
+  margin-right: 0.75rem;
+  vertical-align: middle;
+}
+
+.vr-lead {
+  max-width: 62ch;
+  font-size: 1.08rem;
+  margin-bottom: 2rem;
+}
+
+.vr-section, .vr-band {
+  padding-block: var(--vr-section);
+}
+
+.vr-band {
+  background: var(--vr-wash);
+}
+
+.vr-editorial a.vr-link {
+  color: var(--vr-action);
+}
+
+.vr-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.vr-section > .vr-link {
+  margin-top: 1.5rem;
+}
+
+.vr-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.vr-steps, .vr-bikes, .vr-routes, .vr-review-list {
+  display: grid;
+  gap: var(--vr-gap);
+}
+
+.vr-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+}
+
+.vr-step-mark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--vr-border);
+  margin-bottom: 1.2rem;
+  color: var(--vr-action);
+}
+
+.vr-step-mark span {
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.vr-step-mark i, .vr-guide-group i, .vr-safety i {
+  font-size: 1.4rem;
+  color: var(--vr-action);
+}
+
+.vr-filterbar {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-block: 1.5rem;
+}
+
+.vr-filters, .vr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.vr-filters button {
+  border: 1px solid var(--vr-border);
+  border-radius: var(--vr-radius);
+  background: white;
+  color: var(--vr-ink);
+  padding: 0.4rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.vr-filters button[aria-pressed=true] {
+  background: var(--vr-ink);
+  color: white;
+  border-color: var(--vr-ink);
+}
+
+.vr-filterbar output {
+  font-size: 0.86rem;
+  color: var(--vr-muted);
+}
+
+.vr-bikes {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.vr-bike img, .vr-routes img, .vr-landscape, .vr-story-photo, .vr-gallery img, .vr-bike-hero img {
+  display: block;
+  width: 100%;
+  border-radius: var(--vr-photo-radius);
+}
+
+.vr-bike img, .vr-bike-hero img, .vr-gallery img {
+  aspect-ratio: 4/3;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background: #f7f7f6;
+}
+
+.vr-bike, .vr-routes article {
+  min-width: 0;
+}
+
+.vr-meta {
+  margin-top: 1.25rem;
+}
+
+.vr-bike :is(h2, h3) a, .vr-routes :is(h2, h3) a {
+  color: var(--vr-ink);
+}
+
+.vr-bike p, .vr-routes p {
+  margin-bottom: 0.45rem;
+}
+
+.vr-guide-group {
+  border-top: 1px solid var(--vr-border);
+}
+
+.vr-guide-group:last-child {
+  border-bottom: 1px solid var(--vr-border);
+}
+
+.vr-guide-group > summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 0.25rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.vr-guide-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.vr-guide-group > summary i:last-child {
+  margin-left: auto;
+}
+
+.vr-guide-group[open] > summary i:last-child {
+  transform: rotate(180deg);
+}
+
+.vr-guide-group small {
+  display: block;
+  color: var(--vr-muted);
+  font-size: 0.88rem;
+}
+
+.vr-guide-group ul {
+  padding: 0 1rem 1rem 2.6rem;
+  margin: 0;
+}
+
+.vr-guide-group li a {
+  display: inline-block;
+  padding-block: 0.45rem;
+}
+
+.vr-routes {
+  grid-template-columns: 1.17fr 1fr;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.vr-routes article:nth-child(2) {
+  padding-top: 3rem;
+}
+
+.vr-routes img, .vr-landscape {
+  aspect-ratio: 16/10;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: auto;
+}
+
+.vr-routes :is(h2, h3) {
+  font-size: 1.65rem;
+}
+
+.vr-review-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.vr-review-heading h2 {
+  margin: 0;
+}
+
+.vr-review-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2.5rem;
+}
+
+.vr-review-list:has(.vr-review-featured) {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.vr-review {
+  margin: 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--vr-border);
+}
+
+.vr-review-featured {
+  grid-row: span 2;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  background: var(--vr-paper);
+  border: 0;
+  border-radius: var(--vr-photo-radius);
+}
+
+.vr-review figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+}
+
+.vr-review figcaption strong {
+  font-size: 1rem;
+  color: var(--vr-ink);
+}
+
+.vr-review-stars {
+  display: inline-flex;
+  color: #965300;
+  font-size: 0.9rem;
+}
+
+.vr-review blockquote {
+  margin: 0.8rem 0 0.3rem;
+  color: var(--vr-ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.vr-review-featured blockquote {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.48;
+  letter-spacing: -0.018em;
+}
+
+.vr-review-source, .vr-more-reviews summary {
+  min-height: 44px;
+  align-content: center;
+}
+
+.vr-review-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+}
+
+.vr-more-reviews {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--vr-border);
+}
+
+.vr-more-reviews summary {
+  padding: 0.75rem 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.vr-story-photo {
+  height: auto;
+}
+
+.vr-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.vr-stats dt {
+  font-size: 1.8rem;
+  color: var(--vr-action);
+}
+
+.vr-stats dd {
+  color: var(--vr-muted);
+}
+
+.vr-safety {
+  border-top: 1px solid var(--vr-border);
+  padding-block: 3rem;
+}
+
+.vr-safety > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+}
+
+.vr-safety a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+}
+
+#contact address {
+  font-style: normal;
+  margin: 0;
+}
+
+#contact address p {
+  margin-block: 0.5rem;
+}
+
+.vr-footer {
+  background: white;
+  border-top: 1px solid var(--vr-border);
+  font-family: var(--vr-font);
+  padding: 3rem 0 1.5rem;
+}
+
+.vr-footgrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+}
+
+.vr-footer h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.vr-footer a, .vr-footer p, .vr-footnote {
+  font-size: 0.9rem;
+  color: var(--vr-muted);
+}
+
+.vr-footgrid a {
+  display: table;
+  padding: 5px 0;
+}
+
+.vr-footnote {
+  margin-top: 2rem;
+  border-top: 1px solid var(--vr-border);
+  padding-top: 1rem;
+}
+
+.vr-inside {
+  padding-top: 110px;
+  padding-bottom: var(--vr-section);
+}
+
+.vr-crumb {
+  color: var(--vr-muted);
+  margin-bottom: 2rem;
+  font-size: 0.92rem;
+}
+
+.vr-reading {
+  max-width: var(--vr-reading);
+}
+
+.vr-answer {
+  margin-block: 2rem;
+  overflow-wrap: anywhere;
+}
+
+.vr-subsection {
+  padding-block: 3rem;
+  border-top: 1px solid var(--vr-border);
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.vr-subsection h2 {
+  font-size: 1.65rem;
+}
+
+.vr-subsection aside img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.vr-subsection p + h2 {
+  margin-top: 2rem;
+}
+
+.vr-specs div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--vr-border);
+  padding: 0.5rem 0;
+}
+
+.vr-specs dd {
+  margin: 0;
+  text-align: right;
+}
+
+.vr-included {
+  list-style: none;
+  padding: 0;
+}
+
+.vr-included i {
+  margin-right: 0.6rem;
+  color: var(--vr-action);
+}
+
+.vr-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.vr-inside .vr-guide-list {
+  max-width: var(--vr-reading);
+}
+
+.vr-landscape {
+  max-height: 460px;
+}
+
+body:not(.home):not(.page-template-template-home) .wrapper:first-of-type {
+  margin-top: 78px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 1023px) {
+  .vr-nav-inner {
+    min-height: 66px;
+    gap: 1rem;
+  }
+  .vr-nav-inner img {
+    width: 54px;
+    height: 54px;
+  }
+  .vr-bikes {
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .vr-wrap {
+    padding-inline: 1.25rem;
+  }
+  .vr-editorial h1 {
+    font-size: 2.25rem;
+  }
+  .vr-split, .vr-routes, .vr-review-list, .vr-review-list:has(.vr-review-featured) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .vr-steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .vr-steps li {
+    position: relative;
+    padding: 0 0 1.4rem 4rem;
+    margin-left: 0.7rem;
+    border-left: 1px solid var(--vr-border);
+  }
+  .vr-steps li:last-child {
+    border-color: transparent;
+  }
+  .vr-step-mark {
+    position: absolute;
+    top: 0;
+    left: -0.75rem;
+    background: var(--vr-wash);
+    border: 0;
+    padding: 0.2rem;
+  }
+  .vr-step-mark span {
+    font-size: 1.25rem;
+  }
+  .vr-step-mark i {
+    position: absolute;
+    top: 2rem;
+    left: 0.3rem;
+    font-size: 1rem;
+  }
+  .vr-filters {
+    gap: 0.35rem;
+  }
+  .vr-filters button {
+    font-size: 0.88rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .vr-bikes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .vr-routes article:nth-child(2) {
+    padding-top: 0;
+  }
+  .vr-reviews blockquote {
+    max-width: 100%;
+  }
+  .vr-footgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .vr-footer {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+}
+@media (max-width: 520px) {
+  .vr-bikes {
+    grid-template-columns: 1fr;
+  }
+  .vr-bike {
+    display: grid;
+    grid-template-columns: 116px 1fr;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    border-bottom: 1px solid var(--vr-border);
+    padding-bottom: 1rem;
+  }
+  .vr-bike > a:first-child {
+    grid-row: 1/5;
+    align-self: center;
+  }
+  .vr-bike .vr-meta {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .vr-bike :is(h2, h3) {
+    font-size: 1.12rem;
+    margin: 0;
+  }
+  .vr-bike p:not(.vr-meta) {
+    font-size: 0.88rem;
+  }
+  .vr-footgrid {
+    gap: 1.25rem;
+  }
+  .vr-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vr-btn, .vr-link {
+    transition: color var(--vr-motion), background-color var(--vr-motion);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes vr-enter {
+    from {
+      opacity: 0;
+      transform: translate(var(--vr-enter-x, 0), var(--vr-enter-y, 18px));
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  .header__image img, .header__content > :is(h1, p), .vr-in-view {
+    animation: vr-enter 580ms cubic-bezier(0.2, 0.7, 0.25, 1) var(--vr-delay, 0ms) backwards;
+  }
+  .header__image img {
+    --vr-enter-x: 26px;
+    --vr-enter-y: 0;
+  }
+  .header__content h1 {
+    --vr-delay: 65ms;
+  }
+  .header__content p {
+    --vr-delay: 135ms;
+  }
+  .service__image {
+    --vr-enter-x: -20px;
+    --vr-enter-y: 0;
+  }
+  :is(.service__list, .vr-steps, .vr-bikes, .vr-routes) > :nth-child(2) {
+    --vr-delay: 60ms;
+  }
+  :is(.service__list, .vr-steps, .vr-bikes) > :nth-child(3) {
+    --vr-delay: 110ms;
+  }
+  :is(.service__list, .vr-steps) > :nth-child(4) {
+    --vr-delay: 155ms;
+  }
+}
+.vr-contact-dock {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 90;
+}
+
+.vr-contact-dock summary {
+  display: grid;
+  place-items: center;
+  list-style: none;
+  cursor: pointer;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--vr-action);
+  color: white;
+  font-size: 1.45rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vr-contact-dock summary::-webkit-details-marker {
+  display: none;
+}
+
+.vr-contact-dock:not([open]) .ri-close-fill, .vr-contact-dock[open] .ri-chat-3-fill {
+  display: none;
+}
+
+.vr-contact-links {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.6rem);
+  width: 12rem;
+  max-height: calc(100dvh - 7rem);
+  overflow: auto;
+  padding: 0.4rem;
+  border: 1px solid var(--vr-border);
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.1333333333);
+}
+
+.vr-contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.8rem;
+  min-height: 44px;
+  color: var(--vr-ink);
+  border-radius: 6px;
+}
+
+.vr-contact-links i {
+  font-size: 1.25rem;
+  color: var(--vr-action);
+}
+
+/* Zalo brand glyph from Simple Icons, sized to the contact icon font. */
+.vr-contact-links .ri-zalo-fill {
+  flex: 0 0 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("../assets/icons/zalo.svg") center/contain no-repeat;
+  mask: url("../assets/icons/zalo.svg") center/contain no-repeat;
+}
+
+.vr-contact-links a:hover {
+  background: var(--vr-wash);
+}
+
+@media (max-width: 1279px), (hover: none) and (pointer: coarse) {
+  .vr-nav .vr-nav-rent {
+    display: none;
+  }
+  .vr-nav-inner {
+    min-height: 66px;
+  }
+  #vr-toggle {
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 3;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    border: 0;
+    border-radius: 50%;
+    background: white;
+    color: var(--vr-ink);
+    font-size: 1.5rem;
+  }
+  #vr-toggle[aria-expanded=true] .ri-menu-fill {
+    display: none;
+  }
+  #vr-toggle[aria-expanded=true] .ri-close-fill {
+    display: block;
+  }
+  #vr-menu {
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+  #vr-menu {
+    position: fixed;
+    inset: var(--vr-admin-offset, var(--wp-admin--admin-bar--height, 0px)) 0 0 auto;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    width: min(280px, 88vw);
+    gap: 0.2rem;
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 5rem 1.5rem 2rem;
+    background: #ad241e;
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  #vr-menu a {
+    min-height: 46px;
+  }
+  #vr-menu a {
+    color: white;
+    font-size: 1.08rem;
+  }
+  #vr-menu a:focus-visible {
+    outline-color: white;
+  }
+  #vr-menu.is-open {
+    visibility: visible;
+    transform: none;
+  }
+  .vr-nav-shade:not([hidden]) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(9, 16, 33, 0.4);
+  }
+  .vr-drawer-open {
+    overflow: hidden;
+  }
+  .vr-drawer-open .vr-contact-dock {
+    visibility: hidden;
+  }
+}
+@media (max-width: 1279px) and (prefers-reduced-motion: no-preference), (hover: none) and (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+  #vr-menu.vr-drawer-motion {
+    transition: transform 0.25s ease, visibility 0s 0.25s;
+  }
+  #vr-menu.vr-drawer-motion.is-open {
+    transition-delay: 0s;
+  }
+}
+.vr-rental-rates {
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  color: var(--vr-ink);
+}
+.vr-rental-rates > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--vr-border);
+}
+.vr-rental-rates dt {
+  font-weight: 600;
+}
+.vr-rental-rates dd {
+  margin: 0;
+  text-align: right;
+}
+
+.vr-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+.vr-availability[data-availability=available] {
+  color: #226238;
+}
+.vr-availability[data-availability=unavailable] {
+  color: #984025;
+}
+.vr-availability[data-availability=on_request] {
+  color: var(--vr-muted);
+}
+.vr-availability::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+@media (max-width: 520px) {
+  .vr-bike .vr-rental-rates, .vr-bike .vr-availability {
+    grid-column: 2;
+  }
+  .vr-bike > .vr-link {
+    grid-column: 2;
+  }
+}
+/* Product detail gallery and rental summary. */
+.vr-bike-hero {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.vr-product-gallery {
+  min-width: 0;
+}
+
+.vr-product-gallery .vr-gallery-main {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border: 1px solid var(--vr-border);
+  border-radius: var(--vr-photo-radius);
+  background: #f7f7f6;
+}
+
+.vr-gallery-controls {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.vr-gallery-thumbs {
+  display: flex;
+  grid-column: 2;
+  gap: 0.75rem;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 4px;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+}
+
+.vr-gallery-thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.vr-gallery-thumb {
+  display: block;
+  flex: 0 0 80px;
+  height: 80px;
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #f7f7f6;
+  scroll-snap-align: center;
+}
+
+.vr-gallery-thumb:first-child {
+  margin-left: auto;
+}
+
+.vr-gallery-thumb:last-child {
+  margin-right: auto;
+}
+
+.vr-gallery-thumb[aria-current=true] {
+  border-color: var(--vr-accent);
+  background: white;
+}
+
+.vr-product-gallery .vr-gallery-thumbs img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.vr-gallery-arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--vr-border);
+  border-radius: 50%;
+  background: white;
+  color: var(--vr-ink);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+}
+
+.vr-gallery-arrow i {
+  display: block;
+  line-height: 1;
+}
+
+.vr-gallery-arrow:not(:disabled):hover {
+  color: var(--vr-action);
+  border-color: var(--vr-action);
+  background: #fff5f3;
+}
+
+.vr-gallery-arrow:disabled {
+  color: #b3b8bf;
+  border-color: #e8eaec;
+  background: #fafafa;
+  box-shadow: none;
+  cursor: default;
+}
+
+.vr-bike-summary {
+  padding-top: 0.75rem;
+}
+
+.vr-bike-summary h1 {
+  margin-bottom: 1.5rem;
+}
+
+.vr-bike-summary .vr-rental-rates {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+}
+.vr-bike-summary .vr-rental-rates > div {
+  padding: 0.85rem 0;
+}
+.vr-bike-summary .vr-rental-rates dd {
+  font-weight: 700;
+}
+
+.vr-bike-summary .vr-lead {
+  margin: 1rem 0 1.5rem;
+}
+
+.vr-bike-summary .vr-btn {
+  min-height: 48px;
+}
+
+@media (max-width: 1023px) {
+  .vr-bike-hero {
+    grid-template-columns: 1fr;
+  }
+  .vr-product-gallery {
+    width: min(100%, 640px);
+    margin-inline: auto;
+  }
+  .vr-bike-summary {
+    padding-top: 0;
+  }
+}
+@media (max-width: 520px) {
+  .vr-gallery-thumb {
+    flex-basis: 64px;
+    height: 64px;
+  }
+  .vr-gallery-thumbs {
+    gap: 0.5rem;
+  }
+  .vr-gallery-controls {
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+  .vr-bike-summary .vr-btn {
+    width: 100%;
+  }
+}
+/* Refined fleet presentation: photo, model, rates, then a single clear action. */
+.vr-filters {
+  gap: 0.35rem;
+}
+
+.vr-filters button {
+  border-color: transparent;
+  background: #f4f4f1;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.vr-filters button:hover {
+  background: #eaece7;
+}
+
+.vr-filters button[aria-pressed=true] {
+  background: var(--vr-ink);
+  border-color: var(--vr-ink);
+}
+
+.vr-bikes {
+  row-gap: 3rem;
+}
+
+.vr-bike {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--vr-border);
+  padding-bottom: 0;
+}
+
+.vr-bike-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--vr-photo-radius);
+  background: #f4f4f1;
+}
+
+.vr-bike-media > a {
+  display: block;
+}
+
+.vr-bike-media img {
+  border-radius: 0;
+}
+
+.vr-bike-media .vr-availability {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.8rem;
+  max-width: calc(100% - 1.6rem);
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.vr-bike-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.15rem 0 0;
+}
+
+.vr-bike-info .vr-meta {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--vr-muted);
+}
+
+.vr-bike-info :is(h2, h3) {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+
+.vr-bike-info .vr-bike-description {
+  min-height: 3.4em;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.vr-bike-info .vr-rates-compact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: auto 0 1rem;
+}
+
+.vr-rates-compact > div {
+  display: block;
+  padding: 0;
+  border: 0;
+}
+
+.vr-rates-compact dt {
+  margin-bottom: 0.3rem;
+  color: var(--vr-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.vr-rates-compact dd {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.vr-rental-rates small {
+  color: var(--vr-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.vr-bike-info .vr-rate-enquiry {
+  margin: auto 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--vr-ink);
+}
+
+.vr-bike-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.85rem 0;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.vr-bike-link i {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f3f3f0;
+}
+
+.vr-bike-link:hover i {
+  background: #fce8e4;
+}
+
+.vr-bike-summary h1 {
+  margin-bottom: 0.8rem;
+}
+
+.vr-bike-summary .vr-bike-spec-line {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--vr-muted);
+}
+
+.vr-detail-prices {
+  padding: 0.25rem 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 12px;
+  background: var(--vr-wash);
+}
+
+.vr-bike-summary .vr-detail-prices .vr-rental-rates {
+  margin: 0;
+}
+
+.vr-detail-prices .vr-rental-rates > div:last-child {
+  border: 0;
+}
+
+.vr-detail-prices .vr-rental-rates dd {
+  font-variant-numeric: tabular-nums;
+}
+
+.vr-bike-summary > .vr-btn {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.vr-rental-help {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.vr-rental-help .vr-link {
+  min-height: 44px;
+  font-size: 0.8rem;
+  color: var(--vr-muted);
+  font-weight: 500;
+}
+
+.vr-gallery-thumbs {
+  padding: 8px;
+}
+
+.vr-guide-group > summary {
+  border-radius: 8px;
+}
+
+.vr-guide-group summary:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.vr-review-featured {
+  border-left: 3px solid var(--vr-accent);
+}
+
+.vr-story-photo {
+  border-radius: var(--vr-photo-radius);
+}
+
+.vr-contact-links {
+  width: 14rem;
+  padding: 0.6rem;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+}
+
+.vr-contact-links a {
+  gap: 0.85rem;
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.vr-contact-links i {
+  flex: 0 0 1.25rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .vr-bikes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .vr-bikes {
+    row-gap: 2rem;
+  }
+  .vr-bike {
+    display: flex;
+    padding-bottom: 0;
+  }
+  .vr-bike-media img {
+    aspect-ratio: 16/11;
+  }
+  .vr-bike-info {
+    padding-top: 1rem;
+  }
+  .vr-bike-info :is(h2, h3) {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .vr-bike-info .vr-bike-description {
+    min-height: 0;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .vr-bike-info .vr-meta {
+    margin-bottom: 0.45rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vr-bike-media img {
+    transition: transform 240ms ease;
+  }
+  .vr-bike-media > a:hover img {
+    transform: scale(1.025);
+  }
+  .vr-filters button, .vr-bike-link i, .vr-contact-links a {
+    transition: background-color var(--vr-motion), color var(--vr-motion);
+  }
+}
+/* Info Hub uses the original copy with a shared, readable editorial layout. */
+.vr-info-heading {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  align-items: end;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--vr-border);
+}
+
+.vr-info-heading h1 {
+  margin: 0;
+}
+
+.vr-info-heading .vr-lead {
+  max-width: 48ch;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.vr-info-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.vr-info-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(110px + var(--vr-admin-offset, 0px));
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+}
+
+.vr-info-nav a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.9rem 0.8rem;
+  min-height: 48px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--vr-muted);
+  text-decoration: none;
+}
+
+.vr-info-nav a > span {
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--vr-muted);
+}
+
+.vr-info-nav a:hover, .vr-info-nav a[aria-current] {
+  color: var(--vr-action);
+  background: var(--vr-wash);
+}
+
+.vr-inside .vr-info-layout .vr-guide-list {
+  max-width: none;
+  min-width: 0;
+}
+
+.vr-guide-list {
+  min-width: 0;
+}
+
+.vr-guide-group {
+  scroll-margin-top: calc(110px + var(--vr-admin-offset, 0px));
+}
+
+.vr-guide-group > summary {
+  padding: 1.25rem 0;
+  gap: 0.85rem;
+  border-radius: 0;
+}
+
+.vr-guide-group > summary .vr-guide-group-title {
+  margin: 0;
+  max-width: none;
+  font-size: 1.1rem;
+  font-weight: 750;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+.vr-guide-group > summary > i:first-child {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--vr-wash);
+  font-size: 1.25rem;
+}
+
+.vr-guide-group > summary > i:last-child {
+  color: var(--vr-muted);
+  font-size: 1.15rem;
+}
+
+.vr-info-layout .vr-guide-group {
+  border-top: 0;
+  border-bottom: 0;
+  margin-bottom: 2rem;
+}
+
+.vr-info-layout .vr-guide-group > summary {
+  padding-top: 0;
+}
+
+.vr-guide-questions {
+  padding: 0 0 1rem;
+}
+
+.vr-guide-question {
+  position: relative;
+  border-top: 1px solid var(--vr-border);
+  scroll-margin-top: 110px;
+}
+
+.vr-guide-question > summary {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 64px;
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.vr-guide-question > summary::-webkit-details-marker {
+  display: none;
+}
+
+.vr-guide-question > summary > span:first-child {
+  flex: 1;
+}
+
+.vr-question-toggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px;
+  height: 28px;
+  border: 1px solid var(--vr-border);
+  border-radius: 50%;
+  color: var(--vr-muted);
+  background: var(--vr-paper);
+}
+
+.vr-question-toggle i {
+  grid-area: 1/1;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.vr-question-toggle .ri-subtract-fill {
+  display: none;
+}
+
+.vr-guide-question[open] {
+  background: var(--vr-wash);
+  border-radius: 10px;
+  border-color: transparent;
+  margin-bottom: 0.6rem;
+}
+
+.vr-guide-question[open] > summary {
+  color: var(--vr-action);
+}
+
+.vr-guide-question[open] .vr-question-toggle {
+  border-color: var(--vr-action);
+  color: white;
+  background: var(--vr-action);
+}
+
+.vr-guide-question[open] .ri-add-fill {
+  display: none;
+}
+
+.vr-guide-question[open] .ri-subtract-fill {
+  display: block;
+}
+
+.vr-guide-question:has(+ .vr-guide-question[open]) {
+  border-bottom-color: transparent;
+}
+
+.vr-guide-answer {
+  padding: 0 1.25rem 0.25rem;
+}
+
+.vr-guide-prose {
+  color: var(--vr-muted);
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.vr-guide-prose p {
+  margin: 0 0 1.1em;
+}
+
+.vr-guide-prose strong {
+  font-weight: 700;
+  color: var(--vr-ink);
+}
+
+.vr-guide-prose a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.vr-guide-prose .vr-guide-bullets {
+  display: grid;
+  gap: 0.7rem;
+  list-style: none;
+  padding: 0 0 0 1rem;
+  margin: 0 0 1.35rem;
+}
+
+.vr-guide-prose .vr-guide-bullets li {
+  padding-left: 0.2rem;
+}
+
+.vr-guide-prose .vr-guide-note {
+  border-left: 2px solid var(--vr-action);
+  padding: 0.15rem 0 0.15rem 1rem;
+}
+
+.vr-guide-prose > :last-child {
+  margin-bottom: 0;
+}
+
+.vr-guide-permalink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  margin: 0.35rem 1.25rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.vr-guide-permalink i {
+  font-size: 1rem;
+}
+
+.vr-guide-article {
+  margin-inline: auto;
+  padding-top: 0.5rem;
+}
+
+.vr-guide-article > header {
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--vr-border);
+}
+
+.vr-guide-article h1 {
+  max-width: 24ch;
+  margin: 0.8rem 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.18;
+}
+
+.vr-guide-article .vr-answer {
+  margin-block: 2rem 0;
+}
+
+#faq > .vr-split {
+  align-items: start;
+}
+
+@media (max-width: 1023px) {
+  .vr-info-heading, .vr-info-layout {
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 2rem;
+  }
+  .vr-info-nav a {
+    padding-inline: 0.6rem;
+    gap: 0.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .vr-info-heading {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .vr-info-heading .vr-lead {
+    font-size: 1rem;
+  }
+  .vr-info-layout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .vr-info-nav {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .vr-info-nav a {
+    min-height: 44px;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--vr-border);
+    font-size: 0.8rem;
+  }
+  .vr-info-nav a > span {
+    display: none;
+  }
+  .vr-guide-question > summary {
+    gap: 0.85rem;
+    padding: 1rem 0.85rem;
+    font-size: 0.94rem;
+  }
+  .vr-guide-answer {
+    padding-inline: 0.85rem;
+    font-size: 0.94rem;
+  }
+  .vr-guide-permalink {
+    margin-inline: 0.85rem;
+  }
+  .vr-guide-prose {
+    line-height: 1.8;
+  }
+  .vr-guide-group > summary .vr-guide-group-title {
+    font-size: 1.05rem;
+  }
+  .vr-guide-article > header {
+    padding-bottom: 1.4rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vr-question-toggle, .vr-info-nav a {
+    transition: color var(--vr-motion), background-color var(--vr-motion), border-color var(--vr-motion);
+  }
+}
+
+/*# sourceMappingURL=vietride.css.map */

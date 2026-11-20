@@ -1,0 +1,7 @@
+# VietRide static assets only. This file belongs inside wp-content/themes/vietride/.
+# Page HTML, wp-admin and uploaded customer photos are not cached by these rules.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(?:css|js|woff2?|webp|avif|png|jpe?g|gif|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+</IfModule>

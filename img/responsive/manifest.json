@@ -1,0 +1,1490 @@
+{
+  "version": 1,
+  "images": {
+    "img/Vietride1.webp": {
+      "source": "img/Vietride1.webp",
+      "width": 3231,
+      "height": 2282,
+      "variants": [
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-480.webp",
+          "width": 480,
+          "height": 339,
+          "bytes": 31500
+        },
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-768.webp",
+          "width": 768,
+          "height": 542,
+          "bytes": 54818
+        },
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-960.webp",
+          "width": 960,
+          "height": 678,
+          "bytes": 69168
+        },
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-1440.webp",
+          "width": 1440,
+          "height": 1017,
+          "bytes": 105546
+        }
+      ],
+      "avif_variants": [
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-480.avif",
+          "width": 480,
+          "height": 339,
+          "bytes": 31591
+        },
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-768.avif",
+          "width": 768,
+          "height": 542,
+          "bytes": 54592
+        },
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-960.avif",
+          "width": 960,
+          "height": 678,
+          "bytes": 69653
+        },
+        {
+          "file": "img/responsive/vietride1-5e74f3f379f0-1440.avif",
+          "width": 1440,
+          "height": 1017,
+          "bytes": 110354
+        }
+      ]
+    },
+    "img/Vietride2.webp": {
+      "source": "img/Vietride2.webp",
+      "width": 768,
+      "height": 768,
+      "variants": [
+        {
+          "file": "img/responsive/vietride2-355e969d2e1d-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 58254
+        },
+        {
+          "file": "img/responsive/vietride2-355e969d2e1d-768.webp",
+          "width": 768,
+          "height": 768,
+          "bytes": 108820
+        }
+      ],
+      "avif_variants": [
+        {
+          "file": "img/responsive/vietride2-355e969d2e1d-480.avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 38412
+        },
+        {
+          "file": "img/responsive/vietride2-355e969d2e1d-768.avif",
+          "width": 768,
+          "height": 768,
+          "bytes": 55043
+        }
+      ]
+    },
+    "img/logo_red_square.webp": {
+      "source": "img/logo_red_square.webp",
+      "width": 343,
+      "height": 232,
+      "variants": [
+        {
+          "file": "img/responsive/logo-red-square-28cd1c79cc5c-80.webp",
+          "width": 80,
+          "height": 54,
+          "bytes": 3976
+        },
+        {
+          "file": "img/responsive/logo-red-square-28cd1c79cc5c-160.webp",
+          "width": 160,
+          "height": 108,
+          "bytes": 7694
+        }
+      ]
+    },
+    "img/vietride-story.webp": {
+      "source": "img/vietride-story.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/vietride-story-27d67a6a8274-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 29220
+        },
+        {
+          "file": "img/responsive/vietride-story-27d67a6a8274-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 81638
+        }
+      ]
+    },
+    "img/saigon-streets.jpg": {
+      "source": "img/saigon-streets.jpg",
+      "width": 1000,
+      "height": 633,
+      "variants": [
+        {
+          "file": "img/responsive/saigon-streets-d4c56cd24dc6-480.webp",
+          "width": 480,
+          "height": 304,
+          "bytes": 17906
+        },
+        {
+          "file": "img/responsive/saigon-streets-d4c56cd24dc6-640.webp",
+          "width": 640,
+          "height": 405,
+          "bytes": 26190
+        },
+        {
+          "file": "img/responsive/saigon-streets-d4c56cd24dc6-768.webp",
+          "width": 768,
+          "height": 486,
+          "bytes": 32462
+        },
+        {
+          "file": "img/responsive/saigon-streets-d4c56cd24dc6-960.webp",
+          "width": 960,
+          "height": 608,
+          "bytes": 42202
+        }
+      ]
+    },
+    "img/mekong-delta.jpg": {
+      "source": "img/mekong-delta.jpg",
+      "width": 1000,
+      "height": 563,
+      "variants": [
+        {
+          "file": "img/responsive/mekong-delta-fda1f29b246d-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 40848
+        },
+        {
+          "file": "img/responsive/mekong-delta-fda1f29b246d-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 72360
+        },
+        {
+          "file": "img/responsive/mekong-delta-fda1f29b246d-768.webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 101678
+        },
+        {
+          "file": "img/responsive/mekong-delta-fda1f29b246d-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 149344
+        }
+      ]
+    },
+    "img/saigon-tour-map.webp": {
+      "source": "img/saigon-tour-map.webp",
+      "width": 1499,
+      "height": 1057,
+      "variants": [
+        {
+          "file": "img/responsive/saigon-tour-map-9aa51608a526-480.webp",
+          "width": 480,
+          "height": 338,
+          "bytes": 22300
+        },
+        {
+          "file": "img/responsive/saigon-tour-map-9aa51608a526-960.webp",
+          "width": 960,
+          "height": 677,
+          "bytes": 69446
+        }
+      ]
+    },
+    "img/saigon-tour-stops.webp": {
+      "source": "img/saigon-tour-stops.webp",
+      "width": 1506,
+      "height": 1064,
+      "variants": [
+        {
+          "file": "img/responsive/saigon-tour-stops-3e0f33493f91-480.webp",
+          "width": 480,
+          "height": 339,
+          "bytes": 42028
+        },
+        {
+          "file": "img/responsive/saigon-tour-stops-3e0f33493f91-960.webp",
+          "width": 960,
+          "height": 678,
+          "bytes": 132200
+        }
+      ]
+    },
+    "img/vietnam-road-map.webp": {
+      "source": "img/vietnam-road-map.webp",
+      "width": 1458,
+      "height": 1068,
+      "variants": [
+        {
+          "file": "img/responsive/vietnam-road-map-dadd4a23f74e-480.webp",
+          "width": 480,
+          "height": 352,
+          "bytes": 35702
+        },
+        {
+          "file": "img/responsive/vietnam-road-map-dadd4a23f74e-960.webp",
+          "width": 960,
+          "height": 703,
+          "bytes": 102204
+        }
+      ]
+    },
+    "img/fleet/kymco-candy-1.webp": {
+      "source": "img/fleet/kymco-candy-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-candy-1-3ce0756669f7-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9408
+        },
+        {
+          "file": "img/responsive/kymco-candy-1-3ce0756669f7-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 51650
+        },
+        {
+          "file": "img/responsive/kymco-candy-1-3ce0756669f7-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 152736
+        }
+      ]
+    },
+    "img/fleet/kymco-candy-2.webp": {
+      "source": "img/fleet/kymco-candy-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-candy-2-c00421ca2740-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7584
+        }
+      ]
+    },
+    "img/fleet/kymco-candy-3.webp": {
+      "source": "img/fleet/kymco-candy-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-candy-3-f2506498b696-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6848
+        }
+      ]
+    },
+    "img/fleet/kymco-candy-4.webp": {
+      "source": "img/fleet/kymco-candy-4.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-candy-4-501741df21ef-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6478
+        }
+      ]
+    },
+    "img/fleet/kymco-like-1.webp": {
+      "source": "img/fleet/kymco-like-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-like-1-87e9d48b6e35-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11086
+        },
+        {
+          "file": "img/responsive/kymco-like-1-87e9d48b6e35-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 67076
+        },
+        {
+          "file": "img/responsive/kymco-like-1-87e9d48b6e35-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 226386
+        }
+      ]
+    },
+    "img/fleet/kymco-like-2.webp": {
+      "source": "img/fleet/kymco-like-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-like-2-53b6f0554cd5-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6410
+        }
+      ]
+    },
+    "img/fleet/kymco-like-3.webp": {
+      "source": "img/fleet/kymco-like-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-like-3-d593cf604a81-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6612
+        }
+      ]
+    },
+    "img/fleet/kymco-like-4.webp": {
+      "source": "img/fleet/kymco-like-4.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-like-4-a94c886292ab-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10520
+        }
+      ]
+    },
+    "img/fleet/sym-elite-1.webp": {
+      "source": "img/fleet/sym-elite-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/sym-elite-1-3ad90fed9a02-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4254
+        },
+        {
+          "file": "img/responsive/sym-elite-1-3ad90fed9a02-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 15748
+        },
+        {
+          "file": "img/responsive/sym-elite-1-3ad90fed9a02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 35428
+        }
+      ]
+    },
+    "img/fleet/sym-angela-1.webp": {
+      "source": "img/fleet/sym-angela-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/sym-angela-1-a4dc03c823b2-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10184
+        },
+        {
+          "file": "img/responsive/sym-angela-1-a4dc03c823b2-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 64208
+        },
+        {
+          "file": "img/responsive/sym-angela-1-a4dc03c823b2-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 229504
+        }
+      ]
+    },
+    "img/fleet/sym-angela-2.webp": {
+      "source": "img/fleet/sym-angela-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/sym-angela-2-e263f3f5502c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10212
+        }
+      ]
+    },
+    "img/fleet/yadea-voltguard-1.webp": {
+      "source": "img/fleet/yadea-voltguard-1.webp",
+      "width": 800,
+      "height": 550,
+      "variants": [
+        {
+          "file": "img/responsive/yadea-voltguard-1-019aaf9f6abd-192.webp",
+          "width": 192,
+          "height": 132,
+          "bytes": 8816
+        },
+        {
+          "file": "img/responsive/yadea-voltguard-1-019aaf9f6abd-480.webp",
+          "width": 480,
+          "height": 330,
+          "bytes": 30218
+        },
+        {
+          "file": "img/responsive/yadea-voltguard-1-019aaf9f6abd-800.webp",
+          "width": 800,
+          "height": 550,
+          "bytes": 46360
+        }
+      ]
+    },
+    "img/fleet/honda-air-blade-1.webp": {
+      "source": "img/fleet/honda-air-blade-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-air-blade-1-ae0443e2d34a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10110
+        },
+        {
+          "file": "img/responsive/honda-air-blade-1-ae0443e2d34a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 42022
+        },
+        {
+          "file": "img/responsive/honda-air-blade-1-ae0443e2d34a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 96340
+        }
+      ]
+    },
+    "img/fleet/honda-air-blade-2.webp": {
+      "source": "img/fleet/honda-air-blade-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-air-blade-2-577ca6d59281-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7232
+        }
+      ]
+    },
+    "img/fleet/honda-air-blade-3.webp": {
+      "source": "img/fleet/honda-air-blade-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-air-blade-3-9d2556be62c8-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9538
+        }
+      ]
+    },
+    "img/fleet/honda-air-blade-4.webp": {
+      "source": "img/fleet/honda-air-blade-4.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-air-blade-4-f169050aa282-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10242
+        }
+      ]
+    },
+    "img/fleet/honda-vision-1.webp": {
+      "source": "img/fleet/honda-vision-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-vision-1-a4e8c6cd1086-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11424
+        },
+        {
+          "file": "img/responsive/honda-vision-1-a4e8c6cd1086-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 64896
+        },
+        {
+          "file": "img/responsive/honda-vision-1-a4e8c6cd1086-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 193700
+        }
+      ]
+    },
+    "img/fleet/honda-vision-2.webp": {
+      "source": "img/fleet/honda-vision-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-vision-2-9a82ca0c72f6-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7212
+        }
+      ]
+    },
+    "img/fleet/honda-vision-3.webp": {
+      "source": "img/fleet/honda-vision-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-vision-3-6aea903648de-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11268
+        }
+      ]
+    },
+    "img/fleet/honda-lead-1.webp": {
+      "source": "img/fleet/honda-lead-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-lead-1-c082f2ff444c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4206
+        },
+        {
+          "file": "img/responsive/honda-lead-1-c082f2ff444c-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14104
+        },
+        {
+          "file": "img/responsive/honda-lead-1-c082f2ff444c-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 33910
+        }
+      ]
+    },
+    "img/fleet/honda-lead-2.webp": {
+      "source": "img/fleet/honda-lead-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-lead-2-4cfe03ca3b9f-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3720
+        }
+      ]
+    },
+    "img/fleet/honda-sh-1.webp": {
+      "source": "img/fleet/honda-sh-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-sh-1-79c6a2529eaf-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3934
+        },
+        {
+          "file": "img/responsive/honda-sh-1-79c6a2529eaf-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 13280
+        },
+        {
+          "file": "img/responsive/honda-sh-1-79c6a2529eaf-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 29348
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-6-1.webp": {
+      "source": "img/fleet/yamaha-nouvo-6-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-6-1-3373121e591a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11504
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-6-1-3373121e591a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 71474
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-6-1-3373121e591a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 251876
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-6-2.webp": {
+      "source": "img/fleet/yamaha-nouvo-6-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-6-2-787600e538c3-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10190
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-6-3.webp": {
+      "source": "img/fleet/yamaha-nouvo-6-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-6-3-41b885ab035b-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9266
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-6-4.webp": {
+      "source": "img/fleet/yamaha-nouvo-6-4.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-6-4-bd511568e66e-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9184
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-5-1.webp": {
+      "source": "img/fleet/yamaha-nouvo-5-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-5-1-a710dc5b137a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8786
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-5-1-a710dc5b137a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 40988
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-5-1-a710dc5b137a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 105900
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-5-2.webp": {
+      "source": "img/fleet/yamaha-nouvo-5-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-5-2-e6c46036d82b-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10894
+        }
+      ]
+    },
+    "img/fleet/yamaha-freego-s-1.webp": {
+      "source": "img/fleet/yamaha-freego-s-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-freego-s-1-c7852de1d3f2-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11638
+        },
+        {
+          "file": "img/responsive/yamaha-freego-s-1-c7852de1d3f2-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 64816
+        },
+        {
+          "file": "img/responsive/yamaha-freego-s-1-c7852de1d3f2-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 190850
+        }
+      ]
+    },
+    "img/fleet/yamaha-freego-s-2.webp": {
+      "source": "img/fleet/yamaha-freego-s-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-freego-s-2-5ddd5e0c936a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7824
+        }
+      ]
+    },
+    "img/fleet/yamaha-freego-s-3.webp": {
+      "source": "img/fleet/yamaha-freego-s-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-freego-s-3-e4cff9fdc6f7-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8220
+        }
+      ]
+    },
+    "img/fleet/yamaha-freego-s-4.webp": {
+      "source": "img/fleet/yamaha-freego-s-4.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-freego-s-4-843da4c5df99-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8050
+        }
+      ]
+    },
+    "img/fleet/yamaha-janus-1.webp": {
+      "source": "img/fleet/yamaha-janus-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-janus-1-96d6fcc28560-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11626
+        },
+        {
+          "file": "img/responsive/yamaha-janus-1-96d6fcc28560-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 56006
+        },
+        {
+          "file": "img/responsive/yamaha-janus-1-96d6fcc28560-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 117448
+        }
+      ]
+    },
+    "img/fleet/yamaha-janus-2.webp": {
+      "source": "img/fleet/yamaha-janus-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-janus-2-a923719df42d-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6470
+        }
+      ]
+    },
+    "img/fleet/yamaha-janus-3.webp": {
+      "source": "img/fleet/yamaha-janus-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-janus-3-183b5dad433c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7886
+        }
+      ]
+    },
+    "img/fleet/yamaha-grande-1.webp": {
+      "source": "img/fleet/yamaha-grande-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-grande-1-caf640c8a0b1-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3592
+        },
+        {
+          "file": "img/responsive/yamaha-grande-1-caf640c8a0b1-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 12054
+        },
+        {
+          "file": "img/responsive/yamaha-grande-1-caf640c8a0b1-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 27846
+        }
+      ]
+    },
+    "img/fleet/yamaha-grande-2.webp": {
+      "source": "img/fleet/yamaha-grande-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-grande-2-6a3e0c2025fe-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7022
+        }
+      ]
+    },
+    "img/fleet/piaggio-liberty-1.webp": {
+      "source": "img/fleet/piaggio-liberty-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/piaggio-liberty-1-fb727190d05a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6304
+        },
+        {
+          "file": "img/responsive/piaggio-liberty-1-fb727190d05a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 23082
+        },
+        {
+          "file": "img/responsive/piaggio-liberty-1-fb727190d05a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 53614
+        }
+      ]
+    },
+    "img/fleet/piaggio-vespa-lx125-1.webp": {
+      "source": "img/fleet/piaggio-vespa-lx125-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/piaggio-vespa-lx125-1-4ecb989655e3-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5110
+        },
+        {
+          "file": "img/responsive/piaggio-vespa-lx125-1-4ecb989655e3-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14436
+        },
+        {
+          "file": "img/responsive/piaggio-vespa-lx125-1-4ecb989655e3-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 30420
+        }
+      ]
+    },
+    "img/fleet/honda-future-1.webp": {
+      "source": "img/fleet/honda-future-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-future-1-2d80ab343c9c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9040
+        },
+        {
+          "file": "img/responsive/honda-future-1-2d80ab343c9c-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 56594
+        },
+        {
+          "file": "img/responsive/honda-future-1-2d80ab343c9c-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 197450
+        }
+      ]
+    },
+    "img/fleet/honda-future-2.webp": {
+      "source": "img/fleet/honda-future-2.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-future-2-d1b7fe565b5c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9314
+        }
+      ]
+    },
+    "img/fleet/honda-future-3.webp": {
+      "source": "img/fleet/honda-future-3.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-future-3-97410baa51f8-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9200
+        }
+      ]
+    },
+    "img/fleet/honda-future-4.webp": {
+      "source": "img/fleet/honda-future-4.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-future-4-c9d36ba24d98-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9734
+        }
+      ]
+    },
+    "img/fleet/honda-wave-alpha-1.webp": {
+      "source": "img/fleet/honda-wave-alpha-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-wave-alpha-1-3dea20ba123c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9250
+        },
+        {
+          "file": "img/responsive/honda-wave-alpha-1-3dea20ba123c-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 33688
+        },
+        {
+          "file": "img/responsive/honda-wave-alpha-1-3dea20ba123c-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 74588
+        }
+      ]
+    },
+    "img/fleet/kymco-candy-preview.webp": {
+      "source": "img/fleet/kymco-candy-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-candy-1-3ce0756669f7-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9408
+        },
+        {
+          "file": "img/responsive/kymco-candy-1-3ce0756669f7-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 51650
+        },
+        {
+          "file": "img/responsive/kymco-candy-1-3ce0756669f7-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 152736
+        }
+      ]
+    },
+    "img/fleet/kymco-like-preview.webp": {
+      "source": "img/fleet/kymco-like-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/kymco-like-1-87e9d48b6e35-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11086
+        },
+        {
+          "file": "img/responsive/kymco-like-1-87e9d48b6e35-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 67076
+        },
+        {
+          "file": "img/responsive/kymco-like-1-87e9d48b6e35-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 226386
+        }
+      ]
+    },
+    "img/fleet/sym-elite-preview.webp": {
+      "source": "img/fleet/sym-elite-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/sym-elite-1-3ad90fed9a02-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4254
+        },
+        {
+          "file": "img/responsive/sym-elite-1-3ad90fed9a02-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 15748
+        },
+        {
+          "file": "img/responsive/sym-elite-1-3ad90fed9a02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 35428
+        }
+      ]
+    },
+    "img/fleet/sym-angela-preview.webp": {
+      "source": "img/fleet/sym-angela-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/sym-angela-1-a4dc03c823b2-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10184
+        },
+        {
+          "file": "img/responsive/sym-angela-1-a4dc03c823b2-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 64208
+        },
+        {
+          "file": "img/responsive/sym-angela-1-a4dc03c823b2-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 229504
+        }
+      ]
+    },
+    "img/fleet/yadea-voltguard-preview.webp": {
+      "source": "img/fleet/yadea-voltguard-1.webp",
+      "width": 800,
+      "height": 550,
+      "variants": [
+        {
+          "file": "img/responsive/yadea-voltguard-1-019aaf9f6abd-192.webp",
+          "width": 192,
+          "height": 132,
+          "bytes": 8816
+        },
+        {
+          "file": "img/responsive/yadea-voltguard-1-019aaf9f6abd-480.webp",
+          "width": 480,
+          "height": 330,
+          "bytes": 30218
+        },
+        {
+          "file": "img/responsive/yadea-voltguard-1-019aaf9f6abd-800.webp",
+          "width": 800,
+          "height": 550,
+          "bytes": 46360
+        }
+      ]
+    },
+    "img/fleet/honda-air-blade-preview.webp": {
+      "source": "img/fleet/honda-air-blade-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-air-blade-1-ae0443e2d34a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10110
+        },
+        {
+          "file": "img/responsive/honda-air-blade-1-ae0443e2d34a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 42022
+        },
+        {
+          "file": "img/responsive/honda-air-blade-1-ae0443e2d34a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 96340
+        }
+      ]
+    },
+    "img/fleet/honda-vision-preview.webp": {
+      "source": "img/fleet/honda-vision-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-vision-1-a4e8c6cd1086-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11424
+        },
+        {
+          "file": "img/responsive/honda-vision-1-a4e8c6cd1086-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 64896
+        },
+        {
+          "file": "img/responsive/honda-vision-1-a4e8c6cd1086-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 193700
+        }
+      ]
+    },
+    "img/fleet/honda-lead-preview.webp": {
+      "source": "img/fleet/honda-lead-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-lead-1-c082f2ff444c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4206
+        },
+        {
+          "file": "img/responsive/honda-lead-1-c082f2ff444c-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14104
+        },
+        {
+          "file": "img/responsive/honda-lead-1-c082f2ff444c-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 33910
+        }
+      ]
+    },
+    "img/fleet/honda-sh-preview.webp": {
+      "source": "img/fleet/honda-sh-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-sh-1-79c6a2529eaf-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3934
+        },
+        {
+          "file": "img/responsive/honda-sh-1-79c6a2529eaf-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 13280
+        },
+        {
+          "file": "img/responsive/honda-sh-1-79c6a2529eaf-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 29348
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-6-preview.webp": {
+      "source": "img/fleet/yamaha-nouvo-6-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-6-1-3373121e591a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11504
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-6-1-3373121e591a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 71474
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-6-1-3373121e591a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 251876
+        }
+      ]
+    },
+    "img/fleet/yamaha-nouvo-5-preview.webp": {
+      "source": "img/fleet/yamaha-nouvo-5-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-nouvo-5-1-a710dc5b137a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8786
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-5-1-a710dc5b137a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 40988
+        },
+        {
+          "file": "img/responsive/yamaha-nouvo-5-1-a710dc5b137a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 105900
+        }
+      ]
+    },
+    "img/fleet/yamaha-freego-s-preview.webp": {
+      "source": "img/fleet/yamaha-freego-s-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-freego-s-1-c7852de1d3f2-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11638
+        },
+        {
+          "file": "img/responsive/yamaha-freego-s-1-c7852de1d3f2-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 64816
+        },
+        {
+          "file": "img/responsive/yamaha-freego-s-1-c7852de1d3f2-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 190850
+        }
+      ]
+    },
+    "img/fleet/yamaha-janus-preview.webp": {
+      "source": "img/fleet/yamaha-janus-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-janus-1-96d6fcc28560-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11626
+        },
+        {
+          "file": "img/responsive/yamaha-janus-1-96d6fcc28560-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 56006
+        },
+        {
+          "file": "img/responsive/yamaha-janus-1-96d6fcc28560-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 117448
+        }
+      ]
+    },
+    "img/fleet/yamaha-grande-preview.webp": {
+      "source": "img/fleet/yamaha-grande-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/yamaha-grande-1-caf640c8a0b1-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3592
+        },
+        {
+          "file": "img/responsive/yamaha-grande-1-caf640c8a0b1-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 12054
+        },
+        {
+          "file": "img/responsive/yamaha-grande-1-caf640c8a0b1-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 27846
+        }
+      ]
+    },
+    "img/fleet/piaggio-liberty-preview.webp": {
+      "source": "img/fleet/piaggio-liberty-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/piaggio-liberty-1-fb727190d05a-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6304
+        },
+        {
+          "file": "img/responsive/piaggio-liberty-1-fb727190d05a-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 23082
+        },
+        {
+          "file": "img/responsive/piaggio-liberty-1-fb727190d05a-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 53614
+        }
+      ]
+    },
+    "img/fleet/piaggio-vespa-lx125-preview.webp": {
+      "source": "img/fleet/piaggio-vespa-lx125-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/piaggio-vespa-lx125-1-4ecb989655e3-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5110
+        },
+        {
+          "file": "img/responsive/piaggio-vespa-lx125-1-4ecb989655e3-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14436
+        },
+        {
+          "file": "img/responsive/piaggio-vespa-lx125-1-4ecb989655e3-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 30420
+        }
+      ]
+    },
+    "img/fleet/honda-future-preview.webp": {
+      "source": "img/fleet/honda-future-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-future-1-2d80ab343c9c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9040
+        },
+        {
+          "file": "img/responsive/honda-future-1-2d80ab343c9c-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 56594
+        },
+        {
+          "file": "img/responsive/honda-future-1-2d80ab343c9c-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 197450
+        }
+      ]
+    },
+    "img/fleet/honda-wave-alpha-preview.webp": {
+      "source": "img/fleet/honda-wave-alpha-1.webp",
+      "width": 1654,
+      "height": 1654,
+      "variants": [
+        {
+          "file": "img/responsive/honda-wave-alpha-1-3dea20ba123c-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9250
+        },
+        {
+          "file": "img/responsive/honda-wave-alpha-1-3dea20ba123c-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 33688
+        },
+        {
+          "file": "img/responsive/honda-wave-alpha-1-3dea20ba123c-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 74588
+        }
+      ]
+    }
+  }
+}

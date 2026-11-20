@@ -1,0 +1,53 @@
+{
+  "baseline-repeat": {
+    "url": "https://vietride.vn/",
+    "lighthouse": "13.4.1",
+    "scores": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.92
+    },
+    "metrics": {
+      "first-contentful-paint": "0.4\u00a0s",
+      "largest-contentful-paint": "0.9\u00a0s",
+      "total-blocking-time": "50\u00a0ms",
+      "cumulative-layout-shift": "0"
+    },
+    "note": "Anonymous production baseline, before changes"
+  },
+  "final-optimized-desktop": {
+    "url": "http://tuantran.local/",
+    "lighthouse": "13.4.1",
+    "scores": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 0.78,
+      "seo": 0.69
+    },
+    "metrics": {
+      "first-contentful-paint": "0.4\u00a0s",
+      "largest-contentful-paint": "0.5\u00a0s",
+      "total-blocking-time": "0\u00a0ms",
+      "cumulative-layout-shift": "0"
+    },
+    "note": "Local deliberately uses HTTP and noindex"
+  },
+  "final-optimized-mobile": {
+    "url": "http://tuantran.local/",
+    "lighthouse": "13.4.1",
+    "scores": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 0.78,
+      "seo": 0.69
+    },
+    "metrics": {
+      "first-contentful-paint": "1.4\u00a0s",
+      "largest-contentful-paint": "2.0\u00a0s",
+      "total-blocking-time": "0\u00a0ms",
+      "cumulative-layout-shift": "0"
+    },
+    "note": "Local deliberately uses HTTP and noindex"
+  }
+}

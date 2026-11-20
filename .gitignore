@@ -51,3 +51,22 @@ phpcs.xml
 dist/
 dist-product/
 **/img
+
+# Ship images referenced by the VietRide theme.
+!/img/
+/img/*
+!/img/fleet/
+!/img/Vietride*.webp
+!/img/logo_red_square.webp
+!/img/saigon-*.webp
+!/img/vietnam-road-map.webp
+!/img/vietride-story.webp
+!/img/saigon-streets.jpg
+!/img/mekong-delta.jpg
+
+# Firebase credentials must stay outside the public theme.
+*service-account*.json
+*service_account*.json
+
+# Optimized, content-versioned variants shipped with the theme.
+!/img/responsive/
