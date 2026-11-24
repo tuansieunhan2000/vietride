@@ -5,11 +5,10 @@
 
         </div>
         <div class="header__content">
-          <h1>VietRide: Your City, Your Ride, Your Way</h1>
+          <h1><?php echo esc_html( vr_meta()['title'] ); ?></h1>
           <p>
-           VietRide is a family-owned, rider-focused business that makes getting around Ho Chi Minh City a breeze. With our fleet of reliable scooters and motorbikes, we cater to commuters who want more than just a ride – we offer the freedom to navigate the city’s vibrant streets with ease and efficiency. Whether you're hustling through the daily grind or exploring the urban pulse, VietRide gives you the flexibility to own the road, your way.
+           Rent from our family-run shop in An Khanh for a trip around Saigon or your daily commute.
           </p>
-          
         </div>
       </div>
 

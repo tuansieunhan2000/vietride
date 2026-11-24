@@ -3,11 +3,38 @@
 defined( 'ABSPATH' ) || exit;
 
 function vr_guide_meta( $slug, $guide ) {
-	$text = html_entity_decode( wp_strip_all_tags( $guide['body'] ), ENT_QUOTES, 'UTF-8' );
+	$titles = array(
+		'motorcycle-licence-vietnam' => 'Motorcycle Licence Requirements in Vietnam',
+		'drink-driving-vietnam' => 'Drink Driving Rules in Vietnam',
+		'motorcycle-speed-limits-vietnam' => 'Motorbike Speed Limits in Vietnam',
+		'helmet-requirements-vietnam' => 'Motorbike Helmet Rules in Vietnam',
+		'fuel-guide-vietnam' => 'Where to Find Motorbike Fuel in Vietnam',
+		'flat-tyre' => 'How to Handle a Flat Motorbike Tyre in Vietnam',
+		'motorcycle-parking-saigon' => 'Where to Park a Motorbike in Ho Chi Minh City',
+		'riding-lessons' => 'Riding Lessons & Pickup Tips at VietRide',
+		'luggage-on-a-scooter' => 'What Can You Carry on a Rental Scooter?',
+		'breakdown-support' => 'What to Do if Your Rental Motorbike Breaks Down',
+		'exchange-and-early-return' => 'VietRide Motorbike Exchanges & Early Returns',
+		'rental-insurance' => 'Insurance & Damage for VietRide Rentals',
+		'traveller-and-commuter-rates' => 'VietRide Traveller vs Commuter Rental Rates',
+		'long-term-rates' => 'Long-Term Motorbike Rental Rates in Ho Chi Minh City',
+		'minimum-rental-period' => 'Minimum Rental Periods for VietRide Motorbikes',
+		'rental-agreement' => 'VietRide Motorbike Rental Agreement',
+		'rental-deposit' => 'How VietRide Motorbike Rental Deposits Work',
+		'rental-requirements' => 'Documents Needed to Rent a Motorbike in Vietnam',
+		'payment-methods' => 'VietRide Motorbike Rental Payment Methods',
+	);
+	$descriptions = array(
+		'long-term-rates' => 'See how VietRide calculates weekly and monthly motorbike rental rates in Ho Chi Minh City and why your rate depends on the bike and how you plan to ride.',
+		'rental-agreement' => 'Read the VietRide motorbike rental agreement before pickup in Ho Chi Minh City. Open the PDF to review the rental terms.',
+		'rental-requirements' => 'Check which documents and contact details VietRide asks for before you rent a scooter or motorbike in Ho Chi Minh City.',
+	);
+	$body = preg_replace( '~<br\b[^>]*>|</(?:p|li|h[1-6]|td|th|div)>~i', ' ', $guide['body'] );
+	$text = html_entity_decode( wp_strip_all_tags( $body ), ENT_QUOTES, 'UTF-8' );
 	$text = trim( preg_replace( '/\s+/u', ' ', $text ) );
 	return array(
-		'title' => $guide['title'],
-		'description' => wp_html_excerpt( $text, 157, '…' ),
+		'title' => $titles[$slug] ?? $guide['title'],
+		'description' => $descriptions[$slug] ?? wp_html_excerpt( $text, 157, '…' ),
 	);
 }
 
@@ -16,9 +43,12 @@ function vr_seo_url() {
 }
 function vr_title( $title ) {
 	$meta = vr_meta();
-	return $meta ? $meta['title'] . ' | VietRide' : $title;
+	if ( ! $meta ) { return $title; }
+	return stripos( $meta['title'], 'VietRide' ) === false ? $meta['title'] . ' | VietRide' : $meta['title'];
 }
-add_filter( 'pre_get_document_title', 'vr_title', 99 );
+add_filter( 'pre_get_document_title', function ( $title ) {
+	return vr_meta() ? esc_html( vr_title( $title ) ) : $title;
+}, 99 );
 add_filter( 'wpseo_title', 'vr_title', 99 );
 
 // Virtual pages must never inherit a WordPress post's canonical, shortlink or embeds.
@@ -49,15 +79,27 @@ add_filter( 'wp_robots', function ( $robots ) {
 	return $robots;
 } );
 
-// Send slash variants to one URL; keep tracking parameters without canonicalizing them.
+// The VietRide homepage template always renders the same content on paged requests.
 add_action( 'template_redirect', function () {
-	if ( ! vr_route() || ! in_array( $_SERVER['REQUEST_METHOD'] ?? 'GET', array( 'GET', 'HEAD' ), true ) ) { return; }
+	if ( ! in_array( $_SERVER['REQUEST_METHOD'] ?? 'GET', array( 'GET', 'HEAD' ), true ) ) { return; }
 	$request = wp_unslash( $_SERVER['REQUEST_URI'] ?? '' );
+	$query = wp_parse_url( $request, PHP_URL_QUERY );
+	$suffix = $query ? '?' . $query : '';
+	if ( is_front_page() && ( is_paged() || (int) get_query_var( 'page' ) > 1 ) ) {
+		wp_safe_redirect( remove_query_arg( array( 'page', 'paged' ), home_url( '/' ) . $suffix ), 301, 'VietRide' );
+		exit;
+	}
+	if ( ! vr_route() ) { return; }
+
+	// Core canonical redirects are disabled for virtual routes. Normalize their origin and path.
+	$canonical = vr_seo_url();
+	$destination = wp_parse_url( $canonical );
+	$request_host = wp_parse_url( 'http://' . wp_unslash( $_SERVER['HTTP_HOST'] ?? $destination['host'] ), PHP_URL_HOST );
 	$path = wp_parse_url( $request, PHP_URL_PATH );
-	$canonical_path = wp_parse_url( vr_seo_url(), PHP_URL_PATH );
-	if ( $path !== $canonical_path ) {
-		$query = wp_parse_url( $request, PHP_URL_QUERY );
-		wp_safe_redirect( vr_seo_url() . ( $query ? '?' . $query : '' ), 301, 'VietRide' );
+	$upgrade_https = $destination['scheme'] === 'https' && ! is_ssl();
+	$alternate_host = $request_host && strcasecmp( $request_host, $destination['host'] ) !== 0;
+	if ( $path !== $destination['path'] || $alternate_host || $upgrade_https ) {
+		wp_safe_redirect( $canonical . $suffix, 301, 'VietRide' );
 		exit;
 	}
 }, 1 );
@@ -85,9 +127,7 @@ function vr_seo_robots() {
 	if ( ! vr_route() && get_post_meta( get_queried_object_id(), '_yoast_wpseo_meta-robots-noindex', true ) === '1' ) { $private = true; }
 	if ( $private ) { $robots['noindex'] = true; }
 	if ( ! empty( $robots['noindex'] ) ) { unset( $robots['index'] ); }
-	$robots['max-image-preview'] = 'large';
-	$robots['max-snippet'] = -1;
-	$robots['max-video-preview'] = -1;
+	$robots += array( 'max-image-preview' => 'large', 'max-snippet' => -1, 'max-video-preview' => -1 );
 	$values = array();
 	foreach ( $robots as $name => $value ) {
 		if ( $value === true ) { $values[] = $name; }
@@ -123,7 +163,9 @@ function vr_breadcrumbs( $meta ) {
 		$labels = array( 'motorbikes' => 'Motorbikes', 'guides' => 'Info Hub', 'routes' => 'Routes' );
 		$crumbs[] = array( 'name' => $labels[$parent], 'url' => home_url( '/' . $parent . '/' ) );
 		if ( ! empty( $meta['item'] ) ) {
-			$name = $meta['kind'] === 'bike' ? $meta['item']['brand'] . ' ' . $meta['item']['name'] : $meta['title'];
+			$name = $meta['title'];
+			if ( $meta['kind'] === 'bike' ) { $name = $meta['item']['brand'] . ' ' . $meta['item']['name']; }
+			if ( $meta['kind'] === 'guide' ) { $name = $meta['item']['title']; }
 			$crumbs[] = array( 'name' => $name, 'url' => vr_seo_url() );
 		}
 	}
@@ -138,10 +180,14 @@ function vr_seo_graph( $meta ) {
 			'telephone' => '+84333578594', 'email' => 'hello@vietride.vn',
 			'address' => array( '@type' => 'PostalAddress', 'streetAddress' => '40 Nguyễn Bá Huân, An Khánh', 'addressLocality' => 'Hồ Chí Minh', 'postalCode' => '70000', 'addressCountry' => 'VN' ),
 			'openingHoursSpecification' => array( array( '@type' => 'OpeningHoursSpecification', 'dayOfWeek' => array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ), 'opens' => '09:00', 'closes' => '18:00' ) ),
-			'sameAs' => array( 'https://www.instagram.com/vietride.vn/', 'https://www.facebook.com/VIETRIDE' ) ),
+			'sameAs' => array( 'https://www.instagram.com/vietride.vn/', 'https://www.facebook.com/VIETRIDE' ),
+			'hasMap' => vr_map_url() ),
 		array( '@type' => 'WebSite', '@id' => $website_id, 'url' => $home, 'name' => 'VietRide', 'inLanguage' => 'en', 'publisher' => array( '@id' => $business_id ) ),
 	);
-	$page = array( '@type' => in_array( $kind, array( 'fleet', 'guides', 'routes' ), true ) ? 'CollectionPage' : 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $meta['title'], 'description' => $meta['description'], 'inLanguage' => 'en', 'isPartOf' => array( '@id' => $website_id ), 'about' => array( '@id' => $business_id ), 'primaryImageOfPage' => array( '@type' => 'ImageObject', 'url' => $image['url'], 'caption' => $image['alt'] ) );
+	$page = array( '@type' => in_array( $kind, array( 'fleet', 'guides', 'routes' ), true ) ? 'CollectionPage' : 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $meta['title'], 'description' => $meta['description'], 'inLanguage' => 'en', 'isPartOf' => array( '@id' => $website_id ), 'about' => array( '@id' => $business_id ) );
+	if ( in_array( $kind, array( 'home', 'route', 'bike' ), true ) ) {
+		$page['primaryImageOfPage'] = array( '@type' => 'ImageObject', 'url' => $image['url'], 'caption' => $image['alt'] );
+	}
 	if ( vr_route() ) {
 		$items = array();
 		foreach ( vr_breadcrumbs( $meta ) as $index => $crumb ) { $items[] = array( '@type' => 'ListItem', 'position' => $index + 1, 'name' => $crumb['name'], 'item' => $crumb['url'] ); }
@@ -150,7 +196,8 @@ function vr_seo_graph( $meta ) {
 	}
 	if ( in_array( $kind, array( 'guide', 'route' ), true ) ) {
 		// No invented author, publication date, review or rating.
-		$article = array( '@type' => 'Article', '@id' => $url . '#article', 'headline' => $meta['title'], 'description' => $meta['description'], 'url' => $url, 'image' => $image['url'], 'inLanguage' => 'en', 'mainEntityOfPage' => array( '@id' => $page['@id'] ), 'publisher' => array( '@id' => $business_id ) );
+		$article = array( '@type' => 'Article', '@id' => $url . '#article', 'headline' => $kind === 'guide' ? $meta['item']['title'] : $meta['title'], 'description' => $meta['description'], 'url' => $url, 'inLanguage' => 'en', 'mainEntityOfPage' => array( '@id' => $page['@id'] ), 'publisher' => array( '@id' => $business_id ) );
+		if ( $kind === 'route' ) { $article['image'] = $image['url']; }
 		$page['mainEntity'] = array( '@id' => $article['@id'] ); $graph[] = $article;
 	}
 	if ( $kind === 'bike' ) {
@@ -182,10 +229,12 @@ function vr_seo_graph( $meta ) {
 }
 
 function vr_sitemap_urls() {
+	static $urls;
+	if ( isset( $urls ) ) { return $urls; }
 	$urls = array();
 	foreach ( vr_pages() as $path => $page ) {
 		// Actual WordPress pages are handled by their own sitemap provider.
-		if ( get_page_by_path( $path ) ) { continue; }
+		if ( get_page_by_path( $path, OBJECT, array( 'page' ) ) ) { continue; }
 		$entry = array( 'loc' => home_url( '/' . $path . '/' ) );
 		if ( $page['kind'] === 'bike' && ! empty( $page['item']['_version'] ) ) {
 			$time = strtotime( $page['item']['_version'] );

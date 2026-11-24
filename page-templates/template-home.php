@@ -8,12 +8,26 @@ get_header(); ?>
 <?php get_template_part('template-parts/vietride/introduction'); ?>
 <div class="vr-editorial">
 <section id="how-it-work" class="vr-band"><div class="vr-wrap"><p class="vr-kicker">How it works</p><h2>Your ride, sorted in four simple steps.</h2>
-<ol class="vr-steps"><?php foreach(array(
-	array('motorbike','Choose your ride','Find a scooter that fits your trip.'),
-	array('file-list-3','Get verified','Provide the required documents and information.'),
-	array('ball-pen','Sign & collect','Review the rental details and collect your bike.'),
-	array('road-map','Ride away','Start exploring Vietnam with confidence.')
-) as $i=>$step): ?><li><div class="vr-step-mark"><span aria-hidden="true">0<?php echo $i+1; ?></span><?php vr_icon($step[0]); ?></div><h3><?php echo esc_html($step[1]); ?></h3><p><?php echo esc_html($step[2]); ?></p></li><?php endforeach; ?></ol></div></section>
+<ol class="vr-steps">
+	<?php foreach ( array(
+		array( 'motorbike', 'Choose your ride', 'Find a scooter that fits your trip.' ),
+		array( 'file-list-3', 'Get verified', 'Check which documents you need to rent.', 'guides/rental-requirements/' ),
+		array( 'ball-pen', 'Sign & collect', 'Review the rental details and collect your bike.' ),
+		array( 'road-map', 'Ride away', 'Start exploring Vietnam with confidence.' ),
+	) as $index => $step ) : ?>
+	<li>
+		<div class="vr-step-mark"><span aria-hidden="true">0<?php echo $index + 1; ?></span><?php vr_icon( $step[0] ); ?></div>
+		<h3><?php echo esc_html( $step[1] ); ?></h3>
+		<p>
+			<?php if ( isset( $step[3] ) ) : ?>
+				<a href="<?php echo vr_url( $step[3] ); ?>"><?php echo esc_html( $step[2] ); ?></a>
+			<?php else : ?>
+				<?php echo esc_html( $step[2] ); ?>
+			<?php endif; ?>
+		</p>
+	</li>
+	<?php endforeach; ?>
+</ol></div></section>
 <section id="products" class="vr-wrap vr-section"><p class="vr-kicker">Motorbikes</p><h2>Find your ride.</h2><p class="vr-lead">From easy city scooters to premium bikes, choose the ride that fits your journey.</p>
 <?php get_template_part('template-parts/vietride/fleet'); vr_link('Explore the full rental fleet','motorbikes/'); ?></section>
 <section id="faq" class="vr-band"><div class="vr-wrap vr-split"><div><p class="vr-kicker"><?php echo esc_html(vr_data('info-hub')['title']); ?></p><h2><?php echo esc_html(vr_data('info-hub')['headline']); ?></h2><?php vr_link(vr_data('info-hub')['title'],'guides/'); ?></div><?php get_template_part('template-parts/vietride/guide-list'); ?></div></section>
@@ -44,5 +58,5 @@ get_header(); ?>
 <section id="about" class="vr-wrap vr-section vr-split"><?php echo vr_image_html('img/vietride-story.webp','VietRide in Vietnam',array('class'=>'vr-story-photo','width'=>640,'height'=>520,'loading'=>'lazy','sizes'=>'(min-width: 1200px) 536px, (min-width: 768px) 48vw, calc(100vw - 40px)')); ?><div><p class="vr-kicker">About VietRide</p><h2>Built by riders. Driven by Vietnam.</h2><p>Alec Barnard founded VietRide to share the roads he loves. From our family-run shop in An Khanh, we help travellers and residents find a well-maintained bike for the way they ride.</p><dl class="vr-stats"><div><dt>70+ years</dt><dd>Combined riding experience</dd></div><div><dt>25 years</dt><dd>Riding in Vietnam</dd></div></dl></div></section>
 <section id="safety" class="vr-wrap vr-safety"><h2>Support on the road.</h2><div><?php foreach(array('shield-check'=>array('What your rental covers','rental-insurance'),'tools'=>array('If your bike breaks down','breakdown-support'),'file-list-3'=>array('Review the rental agreement','rental-agreement')) as $icon=>$link): ?><a href="<?php echo vr_url('guides/'.$link[1].'/'); ?>"><?php vr_icon($icon); echo esc_html($link[0]); ?></a><?php endforeach; ?></div></section>
 <section class="vr-band" id="contact"><div class="vr-wrap vr-split"><div><p class="vr-kicker">An Khanh · Ho Chi Minh City</p><h2>Ready to ride?</h2><p class="vr-lead">Pick your bike and start exploring Ho Chi Minh City.</p><div class="vr-actions"><a class="vr-btn" href="https://wa.me/message/63RJ2KOQ6SMPG1" target="_blank" rel="noopener noreferrer">Rent a Bike <?php vr_icon('whatsapp'); ?></a><a class="vr-link" href="mailto:hello@vietride.vn" target="_blank" rel="noopener noreferrer">Contact VietRide <?php vr_icon('mail'); ?></a></div></div>
-<address id="location"><strong>Visit VietRide</strong><p>40 Nguyễn Bá Huân, An Khánh, Hồ Chí Minh 70000, Vietnam<br>Daily, 9:00 AM – 6:00 PM</p><a href="https://www.google.com/maps/search/?api=1&query=40+Nguyen+Ba+Huan+An+Khanh+Ho+Chi+Minh+70000+Vietnam" target="_blank" rel="noopener noreferrer">Directions on Google Maps</a><p><a href="tel:+84333578594" target="_blank" rel="noopener noreferrer">+84 333 578 594</a> · <a href="https://wa.me/message/63RJ2KOQ6SMPG1" target="_blank" rel="noopener noreferrer">WhatsApp</a> · <a href="https://zalo.me/0333578594" target="_blank" rel="noopener noreferrer">Zalo</a></p></address></div></section>
+<address id="location"><strong>Visit VietRide</strong><p>40 Nguyễn Bá Huân, An Khánh, Hồ Chí Minh 70000, Vietnam<br>Daily, 9:00 AM – 6:00 PM</p><a href="<?php echo esc_url( vr_map_url() ); ?>" target="_blank" rel="noopener noreferrer">Directions on Google Maps</a><p><a href="tel:+84333578594" target="_blank" rel="noopener noreferrer">+84 333 578 594</a> · <a href="https://wa.me/message/63RJ2KOQ6SMPG1" target="_blank" rel="noopener noreferrer">WhatsApp</a> · <a href="https://zalo.me/0333578594" target="_blank" rel="noopener noreferrer">Zalo</a></p></address></div></section>
 </div></main><?php get_footer(); ?>

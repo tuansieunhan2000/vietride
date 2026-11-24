@@ -30,11 +30,3 @@ add_action( 'wp_enqueue_scripts', function () {
 	}
 	wp_enqueue_script( 'vr-navigation', get_theme_file_uri( 'js/vietride.min.js' ), array(), filemtime( get_theme_file_path( 'js/vietride.min.js' ) ), true );
 }, 100 );
-
-// Applies to WordPress's virtual robots.txt. A physical root file takes precedence.
-add_filter( 'robots_txt', function ( $output, $public ) {
-	if ( ! $public ) { return $output; }
-	$sitemap = defined( 'WPSEO_VERSION' ) && class_exists( 'WPSEO_Options' ) && WPSEO_Options::get( 'enable_xml_sitemap', true )
-		? home_url( '/sitemap_index.xml' ) : home_url( '/wp-sitemap.xml' );
-	return preg_replace( '/^Sitemap:.*(?:\r?\n|$)/mi', '', $output ) . "\nSitemap: " . esc_url_raw( $sitemap ) . "\n";
-}, 99, 2 );

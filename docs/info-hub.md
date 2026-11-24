@@ -8,7 +8,7 @@ The original has 19 questions in this order:
 - Scooter Essentials: 6 questions
 - Rental Rundown: 9 questions
 
-`inc/vietride/guides.json` contains the original question text, complete answer HTML, category names and ordering. `inc/vietride/info-hub.json` contains the original section title, headline and category order. Both the homepage and `/guides/` render from these same files. Individual guide URLs retain their existing slugs and use the original question as their H1 and page title. Their meta descriptions are excerpts from the original answers rather than rewritten advice.
+`inc/vietride/guides.json` contains the original question text, complete answer HTML, category names and ordering. `inc/vietride/info-hub.json` contains the original section title, headline and category order. Both the homepage and `/guides/` render from these same files. Each guide uses its existing slug and original question as its H1. Search titles describe the topic, and meta descriptions use excerpts or summaries of the source answer.
 
 `docs/reference/info-hub-2026-11-19.html` preserves the original Info Hub section for comparisons; the adjacent JSON file records its source URL and SHA-256. The source licence, speed-limit and rental-agreement answers have been restored. The added accident/emergency and privacy/enquiries topics have been removed. The footer now links to a privacy policy only if an actual WordPress privacy policy page exists.
 

@@ -12,6 +12,9 @@ function vr_data( $name ) {
 }
 function vr_url( $path = '' ) { return esc_url( home_url( '/' . ltrim( $path, '/' ) ) ); }
 function vr_asset( $file ) { return esc_url( preg_match( '~^https?://~i', $file ) ? $file : get_theme_file_uri( $file ) ); }
+function vr_map_url() {
+	return 'https://www.google.com/maps/search/?api=1&query=40+Nguyen+Ba+Huan+An+Khanh+Ho+Chi+Minh+70000+Vietnam';
+}
 require_once __DIR__ . '/images.php';
 function vr_srcset( $stem ) {
 	return vr_asset( "img/$stem-480.webp" ) . ' 480w, ' . vr_asset( "img/$stem-960.webp" ) . ' 960w';
@@ -47,20 +50,23 @@ function vr_pages() {
 	static $pages;
 	if ( isset( $pages ) ) { return $pages; }
 	$pages = array(
-		'motorbikes' => array( 'kind'=>'fleet', 'title'=>'Scooter & Motorbike Fleet in Ho Chi Minh City', 'description'=>'Compare scooters, semi-automatic and electric motorbikes for rent in Ho Chi Minh City. View rental rates, photos and availability with VietRide.' ),
-		'guides' => array( 'kind'=>'guides', 'title'=>vr_data('info-hub')['title'], 'description'=>vr_data('info-hub')['headline'] ),
-		'routes' => array( 'kind'=>'routes', 'title'=>'Motorcycle Routes from Ho Chi Minh City', 'description'=>'Plan a city loop or a longer ride in Southern Vietnam with VietRide’s downloadable maps and local trip notes.' ),
+		'motorbikes' => array( 'kind'=>'fleet', 'title'=>'Motorbike Rental Rates in Ho Chi Minh City', 'description'=>'Compare scooter and motorbike rental rates by model in Ho Chi Minh City. Check availability, photos and specs for automatic, semi-automatic and electric bikes.' ),
+		'guides' => array( 'kind'=>'guides', 'title'=>'Vietnam Motorbike Rental & Riding Guides', 'description'=>'Use VietRide’s Info Hub to prepare for a motorbike rental in Ho Chi Minh City. Find guidance on documents, deposits, rental periods and riding in Vietnam.' ),
+		'routes' => array( 'kind'=>'routes', 'title'=>'Motorbike Routes from Ho Chi Minh City', 'description'=>'Explore Saigon by motorbike or plan a longer road trip through Southern Vietnam with VietRide’s maps and local route notes.' ),
 	);
 	foreach ( vr_data( 'bikes' ) as $bike ) {
 		$name = $bike['brand'] . ' ' . $bike['name'];
-		$pages['motorbikes/'.$bike['slug']] = array( 'kind'=>'bike', 'item'=>$bike, 'title'=>$name.' Rental in Ho Chi Minh City', 'description'=>"Rent a $name in Ho Chi Minh City. View photos, ".$bike['engine'].' specifications and rental information, then ask VietRide about your dates.' );
+		$engine = vr_bike_fuel( $bike ) === 'electric' ? 'electric' : $bike['engine'];
+		$specs = $engine . ' ' . strtolower( $bike['type'] );
+		$pages['motorbikes/'.$bike['slug']] = array( 'kind'=>'bike', 'item'=>$bike, 'title'=>$name.' Rental in Ho Chi Minh City', 'description'=>"Rent a $name in Ho Chi Minh City. See photos, compare rates and check availability for this $specs bike." );
 	}
 	foreach ( vr_data( 'guides' ) as $slug => $guide ) {
 		$seo = vr_guide_meta( $slug, $guide );
-		$pages['guides/'.$slug] = array( 'kind'=>'guide', 'item'=>$guide, 'title'=>$seo['title'], 'description'=>$seo['description'] );
+		$pages['guides/'.$slug] = array_merge( array( 'kind'=>'guide', 'item'=>$guide ), $seo );
 	}
+	$route_titles = array( 'saigon-and-around' => 'Saigon Motorbike Route & Map', 'vietnam-road-trips' => 'Southern Vietnam Motorbike Road Trips' );
 	foreach ( vr_data( 'routes' ) as $slug => $route ) {
-		$pages['routes/'.$slug] = array( 'kind'=>'route', 'item'=>$route, 'title'=>$route['title'], 'description'=>$route['intro'] );
+		$pages['routes/'.$slug] = array( 'kind'=>'route', 'item'=>$route, 'title'=>$route_titles[$slug] ?? $route['title'], 'description'=>$route['intro'] );
 	}
 	return $pages;
 }
@@ -68,7 +74,8 @@ function vr_pages() {
 // Resolve only known editorial URLs. Existing WordPress pages keep their own routes.
 add_action( 'parse_request', function ( $wp ) {
 	$key = trim( $wp->request, '/' );
-	if ( isset( vr_pages()[$key] ) && ! get_page_by_path( $key ) ) {
+	if ( ! preg_match( '~^(motorbikes|guides|routes)(/[^/]+)?$~D', $key ) ) { return; }
+	if ( isset( vr_pages()[$key] ) && ! get_page_by_path( $key, OBJECT, array( 'page' ) ) ) {
 		$GLOBALS['vr_route'] = $key;
 		$wp->query_vars = array( 'post_type'=>'page', 'posts_per_page'=>1 );
 	}
@@ -82,7 +89,7 @@ add_filter( 'template_include', function ( $template ) {
 function vr_meta() {
 	if ( vr_route() ) { return vr_pages()[vr_route()]; }
 	if ( is_front_page() || is_page_template( 'page-templates/template-home.php' ) ) {
-		return array( 'title'=>'Scooter Rental in Ho Chi Minh City', 'description'=>'Rent a scooter from VietRide in An Khanh. Explore the fleet, check rental requirements and plan a city ride or a road trip in Southern Vietnam.' );
+		return array( 'title'=>'Scooter & Motorbike Rental in Ho Chi Minh City', 'description'=>'Rent a scooter or motorbike in Ho Chi Minh City with VietRide. Compare bikes and rental rates, check what to bring and pick up your bike in An Khanh.' );
 	}
 	return array();
 }
@@ -97,6 +104,22 @@ function vr_bike_tags( $bike ) {
 	if ( $bike['type'] === 'Automatic' ) { $tags[]='scooter'; }
 	if ( in_array( $bike['slug'], array('honda-sh','piaggio-vespa-lx125','piaggio-liberty'), true ) ) { $tags[]='premium'; }
 	return $tags;
+}
+function vr_related_bikes( $bike ) {
+	$fuel = vr_bike_fuel( $bike );
+	$same_engine = array();
+	$other_engines = array();
+	foreach ( vr_data( 'bikes' ) as $candidate ) {
+		if ( $candidate['slug'] === $bike['slug'] || $candidate['type'] !== $bike['type'] || vr_bike_fuel( $candidate ) !== $fuel ) {
+			continue;
+		}
+		if ( $candidate['engine'] === $bike['engine'] ) {
+			$same_engine[] = $candidate;
+		} else {
+			$other_engines[] = $candidate;
+		}
+	}
+	return array_slice( array_merge( $same_engine, $other_engines ), 0, 2 );
 }
 function vr_use( $bike ) {
 	if ( ! empty( $bike['description'] ) ) { return $bike['description']; }
